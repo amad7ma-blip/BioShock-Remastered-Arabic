@@ -1,0 +1,4 @@
+﻿دليل تثبيت واستخدام تعريب BioShock Remastered
+==================================================
+1. حمّل ملف الحزمة BioShock_Remastered_Arabic_v2.1.0.zip من قسم Releases.
+2. فك الضغط وشغّل برنامج التثبيت التلقائي BioShock_Remastered_Arabic_Setup.exe أو انسخ مجلد ContentBaked إلى مسار اللعبة.

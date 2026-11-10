@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعريب BioShock Remastered | التعريب العربي الكامل</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b1116;
+            --card-bg: rgba(18, 28, 38, 0.85);
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --gold-dark: #997d25;
+            --accent-cyan: #22d3ee;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: rgba(212, 175, 55, 0.3);
+            --border-glow: rgba(212, 175, 55, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 50% 10%, rgba(34, 211, 238, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+                linear-gradient(180deg, #070c10 0%, #0b1116 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 1rem 3rem;
+            position: relative;
+        }
+
+        .badge-bar {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .badge {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--border-color);
+            color: var(--gold-light);
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .badge.cyan {
+            background: rgba(34, 211, 238, 0.1);
+            border-color: rgba(34, 211, 238, 0.3);
+            color: var(--accent-cyan);
+        }
+
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            background: linear-gradient(135deg, #ffffff 40%, var(--gold-light) 70%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.35rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            margin-bottom: 3.5rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.95rem 2.2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            color: #0b1116;
+            border: 1px solid var(--gold-light);
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #e5c158 0%, var(--gold) 100%);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.8rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            backdrop-filter: blur(12px);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
+        }
+
+        .card-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 0.6rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: var(--gold);
+            margin: 0.8rem auto 0;
+            border-radius: 2px;
+        }
+
+        .guide-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .guide-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 1.2rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--gold);
+            color: #0b1116;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .step-content h4 {
+            font-size: 1.15rem;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .step-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 0.5rem 0.8rem;
+            font-family: monospace;
+            color: var(--accent-cyan);
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 0.4rem;
+            direction: ltr;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="badge-bar">
+                <span class="badge">الإصدار المدقق 2.1.0</span>
+                <span class="badge cyan">Steam & GOG</span>
+                <span class="badge">خط Cairo الأصلي</span>
+                <span class="badge">دعم RTL كامل</span>
+            </div>
+            <h1>تعريب BioShock Remastered</h1>
+            <p class="subtitle">تجربة سينمائية عربية متكاملة في أعماق مدينة رابتشر الأسطورية. ترجمة شاملة لجميع الحوارات، القوائم، والتسجيلات الصوتية بدقة لغوية وهندسية فائقة.</p>
+            <div class="cta-group">
+                <a href="https://github.com/amad7ma-blip/BioShock-Remastered-Arabic/releases/latest" class="btn btn-primary" id="downloadBtn">
+                    <span>تحميل التعريب (Patch)</span>
+                    <span>📥</span>
+                </a>
+                <a href="#guide" class="btn btn-secondary">
+                    <span>طريقة التثبيت</span>
+                    <span>📖</span>
+                </a>
+            </div>
+        </header>
+
+        <section class="features-grid">
+            <div class="card">
+                <span class="card-icon">🎙️</span>
+                <h3>ترجمة درامية كاملة</h3>
+                <p>جميع خطابات أندرو رايان، مكالمات أطلس، ومئات التسجيلات الصوتية للأخوات الصغيرات وسكان رابتشر مترجمة بأعلى دقة أدبية.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🎬</span>
+                <h3>تعليق المخرج بالكامل</h3>
+                <p>ترجمة حصرية لجميع أفلام وثائقي المخرج الـ 11 المدمجة داخل اللعبة (أكثر من 1,710 كتلة حوارية متزامنة بدقة).</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">✨</span>
+                <h3>خط عربي أصلي وتشكيل سليم</h3>
+                <p>تم حقن خط Cairo الأنيق داخل كافة ملفات الفلاش الرسومية، مع معالجة اتجاه النصوص من اليمين إلى اليسار وتفادي مشكلة المربعات كلياً.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">⚡</span>
+                <h3>تثبيت بضغطة زر</h3>
+                <p>برنامج تثبيت مستقل ذكي يتعرف على مجلد اللعبة تلقائياً، ويأخذ نسخة احتياطية لملفاتك الأصلية لتتمكن من إزالة التعريب متى شئت.</p>
+            </div>
+        </section>
+
+        <section id="guide" class="guide-box">
+            <h2 class="section-title">خطوات التركيب والتثبيت</h2>
+            <div class="guide-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>تحميل حزمة التعريب</h4>
+                        <p>حمّل ملف <code>ملف تعريب.zip</code> من الرابط بالأعلى وقم بفك الضغط عنه على جهازك.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>التثبيت السريع (تلقائي)</h4>
+                        <p>شغّل برنامج <code>BioShock_Remastered_Arabic_Setup.exe</code> واضغط على <strong>[تثبيت التعريب]</strong>. سيتكفل البرنامج بالباقي!</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>أو التثبيت اليدوي (نسخ ولصق)</h4>
+                        <p>انسخ مجلد <code>ContentBaked</code> والصقه داخل مجلد اللعبة الرئيسي، ثم وافق على استبدال الملفات:</p>
+                        <div class="code-block">C:\Program Files (x86)\Steam\steamapps\common\BioShock Remastered</div>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>تشغيل اللعبة</h4>
+                        <p>شغّل اللعبة مباشرة واستمتع برحلتك داخل رابتشر بلغتك الأم!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>مشروع تعريب غير رسمي ومجاني لعشاق الألعاب باللغة العربية • جميع حقوق اللعبة الأصلية محفوظة لـ 2K Games</p>
+        </footer>
+    </div>
+
+</body>
+</html>
